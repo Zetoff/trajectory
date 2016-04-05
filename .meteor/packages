@@ -22,3 +22,6 @@ huttonr:bootstrap3
 accounts-password
 std:accounts-ui
 std:accounts-basic
+accounts-meteor-developer
+accounts-github
+service-configuration
