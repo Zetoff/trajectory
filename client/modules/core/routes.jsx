@@ -3,7 +3,7 @@ import {mount} from 'react-mounter';
 
 import MainLayout from './components/main_layout.jsx';
 import Home from './components/home.jsx';
-import SignIn from './components/sign_in.jsx';
+import Login from './components/login.jsx';
 
 
 export default function (injectDeps, {FlowRouter}) {
@@ -18,10 +18,10 @@ export default function (injectDeps, {FlowRouter}) {
     }
   });
 
-  FlowRouter.route('/sign-in',{
+  FlowRouter.route('/login',{
     action() {
       mount(MainLayoutCtx, {
-        content: () => (<SignIn />)
+        content: () => (<Login />)
       });
     }
   });
