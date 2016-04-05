@@ -1,20 +1,14 @@
 import React from 'react';
+import {Jumbotron, Grid, Button} from 'react-bootstrap';
 
 const Home = () => (
-  <div>
-    <h1>Mantra</h1>
-    <p>
-      Welcome to Mantra 0.2.0.
-    </p>
-    <ul>
-      <li>
-        Read <a target="_blank" href="https://kadirahq.github.io/mantra/">spec</a>
-      </li>
-      <li>
-        Learn <a target="_blank" href="https://github.com/sungwoncho/mantra-cli#commands">CLI</a>
-      </li>
-    </ul>
-  </div>
+  <Grid>
+    <Jumbotron>
+      <h1>Trajectory</h1>
+      <h2>Everybody needs to know where its stack is going</h2>
+      <Button bsStyle="primary" bsSize="large">Take Survey to know the results</Button>
+    </Jumbotron>
+  </Grid>
 );
 
 export default Home;
