@@ -8,3 +8,14 @@ ServiceConfiguration.configurations.upsert(
     }
   }
 );
+
+ServiceConfiguration.configurations.upsert(
+  { service: "meteor-developer" },
+  {
+    $set: {
+      clientId: "ER3wHYCupAJrzJezp",
+      loginStyle: "popup",
+      secret: "xJwSoeMKBxRyd257wMs2wQ8RmNmKorfSLw"
+    }
+  }
+);
