@@ -20,9 +20,9 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 kadira:flow-router-ssr
 huttonr:bootstrap3
 accounts-password
-std:accounts-ui
 std:accounts-basic
 accounts-meteor-developer
 accounts-github
 service-configuration
 meteortoys:allthings
+std:accounts-ui
