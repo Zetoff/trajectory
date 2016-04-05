@@ -8,7 +8,7 @@ const FooterInstace = ({
     <Grid>
       <Row>
         <Col md={4}>
-          Zetoff Studio © CURRENT YEAR
+          Zetoff Studio © {new Date().getFullYear()} {/*TODO: Maybe this is not the best place*/}
         </Col>
         <Col md={4}>
           <a href="#">Terms & Conditions</a>
