@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './navbar.jsx';
+import Footer from './footer.jsx';
 
 const Layout = ({
   content = () => null
@@ -9,6 +10,7 @@ const Layout = ({
     <div>
       {content()}
     </div>
+    <Footer />
   </div>
 );
 
