@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './navbar.jsx';
+import Navbar from '../containers/navbar.js';
 import Footer from './footer.jsx';
 
 const Layout = ({
