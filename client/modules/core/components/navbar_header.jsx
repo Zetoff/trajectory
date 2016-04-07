@@ -1,10 +1,10 @@
 import React from 'react';
-import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
+import {Navbar, Nav, NavDropdown, MenuItem} from 'react-bootstrap';
+import NavRightContent from './nav_right_content.jsx';
 
 class NavbarInstance extends React.Component {
     render() {
-        console.log(this.props);
-        const user = this.props.user;
+        const {user} = this.props;
         return (
             <Navbar>
                 <Navbar.Header>
@@ -14,9 +14,9 @@ class NavbarInstance extends React.Component {
                     <Navbar.Toggle/>
                 </Navbar.Header>
                 <Navbar.Collapse>
-                    <Nav pullRight>
-                        <NavItem eventKey={1} href="#">{user ? user.profile.name : 'Login'}</NavItem>
-                    </Nav>
+                  <Nav pullRight>
+                    <NavRightContent user={user} />
+                  </Nav>
                 </Navbar.Collapse>
             </Navbar>
         );

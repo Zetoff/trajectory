@@ -1,5 +1,5 @@
 import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
-import Component from '../components/navbar.jsx';
+import Component from '../components/navbar_header.jsx';
 
 export const composer = ({context}, onData) => {
   const {Meteor} = context();
