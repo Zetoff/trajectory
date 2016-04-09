@@ -7,6 +7,7 @@ class Layout extends React.Component {
     getView(){
       return this.props.canView ? this.props.content() : <Login />;
     }
+    
     render() {
         return (
             <div>

@@ -1,26 +1,21 @@
-import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
+import { useDeps, composeWithTracker, composeAll } from 'mantra-core';
 import Layout from '../components/main_layout.jsx';
 
-export const composer = ({context}, onData) => {
-  const {Meteor, FlowRouter} = context();
+export const composer = ({ context }, onData) => {
+    const { Meteor, FlowRouter } = context();
 
-  const loggingIn = Meteor.loggingIn();
+    const canView = () => {
+        return FlowRouter.current().route.group.name === 'public' || !!Meteor.user();
+    };
 
-  const isPublic = (route) => {
-    let publicRoutes =[
-      'home', 'login'
-    ];
-    return publicRoutes.indexOf(route) > -1;
-  };
-
-  const canView = () => {
-    return isPublic(FlowRouter.current().route.name) || !!Meteor.user();
-  };
-
-  onData(null, {canView: canView()});
+    if (Meteor.loggingIn()) {
+        onData(); //It shows a loading screen.
+    } else {
+        onData(null, { canView: canView() });
+    }
 };
 
 export default composeAll(
-  composeWithTracker(composer),
-  useDeps()
+    composeWithTracker(composer),
+    useDeps()
 )(Layout);
