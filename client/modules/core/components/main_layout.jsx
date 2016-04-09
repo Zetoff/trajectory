@@ -1,20 +1,16 @@
 import React from 'react';
 import Navbar from '../containers/navbar.js';
 import Footer from './footer.jsx';
-import Login from './login.jsx';
+import Yield from '../containers/yield.js';
 
 class Layout extends React.Component {
-    getView(){
-      return this.props.canView ? this.props.content() : <Login />;
-    }
-    
+
+
     render() {
         return (
             <div>
                 <Navbar/>
-                <div className="app-root">
-                    {this.getView()}
-                </div>
+                <Yield content={this.props.content()}/>
                 <Footer/>
             </div>
         );
