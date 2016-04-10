@@ -3,8 +3,9 @@ import {NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
 
 class NavRightContent extends React.Component {
   getLoggedin(user){
+    //TODO: improve user email - profile name
     return(
-      <NavDropdown eventKey={1} title={user.profile.name} id="user-controls">
+      <NavDropdown eventKey={1} title={user._id} id="user-controls">
          <MenuItem eventKey={1.1} href="/profile">Profile</MenuItem>
          <MenuItem divider />
          <MenuItem eventKey={1.2} onClick={this.logout.bind(this)}>Logout</MenuItem>
