@@ -23,6 +23,7 @@ export default function(injectDeps, {FlowRouter}) {
     });
 
     publicRoutes.route('/login', {
+      name:'login',
         action() {
             mount(MainLayoutCtx, {
                 content: () => (<Login/>)
