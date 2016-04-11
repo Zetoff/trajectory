@@ -10,7 +10,7 @@ class Yield extends React.Component {
   render() {
     return (
       <div>
-        {this.getView()};
+        {this.getView()}
       </div>
     );
   }
