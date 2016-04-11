@@ -1,5 +1,6 @@
 import { useDeps, composeWithTracker, composeAll } from 'mantra-core';
 import Yield from '../components/yield.jsx';
+import Loader from '../components/loader.jsx';
 
 export const composer = ({ context }, onData) => {
     const { Meteor, FlowRouter } = context();
@@ -16,6 +17,6 @@ export const composer = ({ context }, onData) => {
 };
 
 export default composeAll(
-    composeWithTracker(composer),
+    composeWithTracker(composer, Loader),
     useDeps()
 )(Yield);
