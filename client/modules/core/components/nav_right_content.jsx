@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
+import FontAwesome from 'react-fontawesome';
 
 class NavRightContent extends React.Component {
   getLoggedin(user){
@@ -15,7 +16,7 @@ class NavRightContent extends React.Component {
 
   getGuest(){
     return(
-      <NavItem eventKey={1} href={FlowRouter.path('login')}>Login</NavItem>
+      <NavItem eventKey={1} href={FlowRouter.path('login')}>Login <FontAwesome name='rocket' spin /></NavItem>
     );
   }
 
