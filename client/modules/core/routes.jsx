@@ -5,6 +5,7 @@ import MainLayout from './components/main_layout.jsx';
 import Home from './components/home.jsx';
 import Login from './components/login.jsx';
 import Profile from './components/profile.jsx';
+import Loader from './components/loader.jsx';
 
 
 export default function(injectDeps, {FlowRouter}) {
@@ -23,9 +24,19 @@ export default function(injectDeps, {FlowRouter}) {
     });
 
     publicRoutes.route('/login', {
+      name:'login',
         action() {
             mount(MainLayoutCtx, {
                 content: () => (<Login/>)
+            });
+        }
+    });
+
+    publicRoutes.route('/loader', {
+      name:'loader',
+        action() {
+            mount(MainLayoutCtx, {
+                content: () => (<Loader/>)
             });
         }
     });
