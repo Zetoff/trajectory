@@ -6,6 +6,7 @@ import Home from './components/home.jsx';
 import Login from './components/login.jsx';
 import Profile from './components/profile.jsx';
 import Loader from './components/loader.jsx';
+import Survey from './containers/survey.js';
 
 
 export default function(injectDeps, {FlowRouter}) {
@@ -46,6 +47,15 @@ export default function(injectDeps, {FlowRouter}) {
       action(){
         mount(MainLayoutCtx,{
             content: () => (<Profile/>)
+        });
+      }
+    });
+
+    authenticatedRoutes.route('/survey',{
+      name:'survey',
+      action(){
+        mount(MainLayoutCtx,{
+            content: () => (<Survey/>)
         });
       }
     });
