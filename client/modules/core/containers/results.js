@@ -4,15 +4,27 @@ import Results from '../components/results.jsx';
 
 export const composer = ({context}, onData) => {
   const {Meteor, Collections} = context();
-  const results = {};
 
-  if(Meteor.subscribe('survey').ready()){
+  const getResults = () => {
+    let results = {};
     results.blaze = Collections.Survey.find({'frontEnd':'blaze'}).count();
     results.angular = Collections.Survey.find({'frontEnd':'angular'}).count();
     results.react = Collections.Survey.find({'frontEnd':'react'}).count();
+    return results;
+  };
+
+  let results = {};
+
+  if(Meteor.subscribe('survey').ready()){
+    results = getResults();
     onData(null, {results});
   }else{
-    onData();
+    results = getResults();
+    if(results){
+      onData(null, {results});
+    }else{
+      onData();
+    }
   }
 };
 
