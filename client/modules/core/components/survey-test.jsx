@@ -23,7 +23,6 @@ class Survey extends React.Component {
     e.preventDefault();
     const {create} = this.props;
     const {frontEnd} = this.refs;
-    console.log(frontEnd.getValue());
     create(frontEnd.getValue());
   }
 }

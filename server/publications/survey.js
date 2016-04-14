@@ -1,7 +1,7 @@
 import {Meteor} from 'meteor/meteor';
 import {check} from 'meteor/check';
 
-import {Survey} from '/lib/collections/collections';
+import {Survey} from '/lib/collections';
 
 export default function () {
   Meteor.publish('survey', function () {

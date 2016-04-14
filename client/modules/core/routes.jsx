@@ -7,6 +7,7 @@ import Login from './components/login.jsx';
 import Profile from './components/profile.jsx';
 import Loader from './components/loader.jsx';
 import Survey from './containers/survey.js';
+import Results from './containers/results.js';
 
 
 export default function(injectDeps, {FlowRouter}) {
@@ -56,6 +57,15 @@ export default function(injectDeps, {FlowRouter}) {
       action(){
         mount(MainLayoutCtx,{
             content: () => (<Survey/>)
+        });
+      }
+    });
+
+    authenticatedRoutes.route('/results',{
+      name:'results',
+      action(){
+        mount(MainLayoutCtx,{
+            content: () => (<Results/>)
         });
       }
     });

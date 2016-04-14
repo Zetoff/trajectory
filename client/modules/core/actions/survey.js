@@ -4,7 +4,6 @@ export default {
         return LocalState.set('SAVING_ERROR', 'A choice is required');
       }
       LocalState.set('SAVING_ERROR', null);
-console.log('calling method');
       Meteor.call('survey.create', frontEnd, (err) => {
         if (err) {
           return LocalState.set('SAVING_ERROR', err.message);
