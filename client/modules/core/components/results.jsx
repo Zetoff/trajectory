@@ -1,15 +1,32 @@
 import React from 'react';
+import {DoughnutChart} from 'react-chartjs';
+
 
 class Results extends React.Component {
 
+  getData(){
+    const {results} = this.props;
+    let data = [
+      { label: 'Blaze',
+        value: results.blaze
+      },
+      {
+        label: 'Angular',
+        value: results.angular
+      },
+      {
+        label: 'React',
+        value: results.react
+      }
+    ];
+    console.log(data);
+    return data;
+  }
 
   render() {
-    const {results} = this.props;
     return (
       <div>
-        <p>Blaze: {results.blaze}</p>
-        <p>Angular: {results.angular}</p>
-        <p>React: {results.react}</p>
+        <DoughnutChart width="600" height="250"/>
       </div>
     );
   }
