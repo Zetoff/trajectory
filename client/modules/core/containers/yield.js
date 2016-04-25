@@ -5,6 +5,9 @@ import Loader from '../components/loader.jsx';
 export const composer = ({ context }, onData) => {
     const { Meteor, FlowRouter } = context();
 
+    //subcription for better latency compensation
+    Meteor.subscribe('survey');
+
     const canView = () => {
         return FlowRouter.current().route.group.name === 'public' || !!Meteor.user();
     };

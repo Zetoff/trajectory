@@ -12,7 +12,14 @@ export const composer = ({context}, onData) => {
     results.react = Collections.Survey.find({'frontEnd':'react'}).count();
     onData(null, {results});
   }else{
-    onData();
+    results.blaze = Collections.Survey.find({'frontEnd':'blaze'}).count();
+    results.angular = Collections.Survey.find({'frontEnd':'angular'}).count();
+    results.react = Collections.Survey.find({'frontEnd':'react'}).count();
+    if(results){
+      onData(null, {results});
+    } else {
+      onData();
+    }
   }
 };
 
