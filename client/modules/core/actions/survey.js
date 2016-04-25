@@ -9,7 +9,7 @@ export default {
           return LocalState.set('SAVING_ERROR', err.message);
         }
       });
-      // FlowRouter.go('/');
+       FlowRouter.go(FlowRouter.path('results'));
     },
     clearErrors({ LocalState }) {
       return LocalState.set('SAVING_ERROR', null);
