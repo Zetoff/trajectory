@@ -1,0 +1,49 @@
+//-----------------------------
+//Style Cluster
+//-----------------------------
+//Import basic bootstrap
+@import "./bootstrap/bootstrap-raw.import.less";
+
+//Import fonts
+//@import url("http://fonts.googleapis.com/css?family=Lora:400,400italic|Work+Sans:300,400,500,600");
+// @font-face {
+//   font-family: 'Unibody8';
+//   src: url(/fonts/Unibody8Pro-RegularSmallCaps.otf);
+// }
+
+//Theme file
+@import "./toolkit-minimal.import.less";
+
+@border-radius-base: 0;
+@border-radius-large: 0;
+@border-radius-small: 0;
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 50px; /* bottom = footer height */
+}
+
+footer {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+}
+
+.login{
+  text-align: center;
+}
+.login > form{
+  margin: 0 auto;
+}
+
+.text-align-center{
+  text-align: center;
+}
